@@ -1,5 +1,6 @@
 {
-  "name": "using-pre-built-react-components",
+  "name": "notes-keeper-app",
+  "homepage": "https://aman71010.github.io/Notes-Keeper-app",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
@@ -7,6 +8,7 @@
   "dependencies": {
     "@material-ui/core": "4.11.4",
     "@material-ui/icons": "4.11.2",
+    "gh-pages": "^3.2.3",
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "react-scripts": "3.2.0"
@@ -15,6 +17,8 @@
     "typescript": "3.3.3"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
