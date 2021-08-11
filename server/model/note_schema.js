@@ -1,10 +1,10 @@
 import mongoose from "mongoose";
 
-const noteSchema = mongoose.Schema({
+const noteSchema = new mongoose.Schema({
     title: {type: String, required: true},
     content: {type: String, required: true}
 });
 
-const note = new mongoose.model("Notes", noteSchema);
+const note = new mongoose.model("Note", noteSchema);
 
 export default note;

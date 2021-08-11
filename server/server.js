@@ -13,7 +13,7 @@ app.use(express.urlencoded({extended: true}));
 
 app.use("/notes", route);
 
-const URL = process.env.MONGODB_ATLAS_URI;
+const URL = process.env.ATLAS_URI;
 const PORT = 3000;
 
 mongoose.connect(URL, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false}).then(()=>{
