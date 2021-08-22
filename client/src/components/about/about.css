@@ -1,0 +1,10 @@
+.about {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.about p {
+    color: #ccc;
+    margin: 0 auto;
+    font-size: 26px;
+}

@@ -3,6 +3,7 @@ import Note from "../model/note_schema.js";
 export const getNotes = async (req, res) => {
     try{
         const notes = await Note.find();
+        //console.log(notes);
         res.json(notes);
     }catch(error){
         res.json({message: error.message });

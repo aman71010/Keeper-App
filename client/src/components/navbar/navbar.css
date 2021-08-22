@@ -1,0 +1,19 @@
+
+.header {
+    background-color: #f5ba13;
+    padding: 6px 32px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  }
+  
+.headerlogo {
+    font-family: "McLaren", cursive;
+    font-size: 40px;
+    padding: 0 0 10px 0;
+}
+
+.navlink {
+    font-family: "McLaren", cursive;
+    font-size: 20px;
+    color: #eee;
+    text-decoration: none;
+}

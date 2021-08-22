@@ -1,13 +1,17 @@
 import React, { useState } from "react";
-import AddIcon from "@material-ui/icons/Add";
+import { useHistory } from "react-router";
 import { Fab } from "@material-ui/core";
 import { Zoom } from "@material-ui/core";
+import { addNote } from "../../service/api.js";
+import AddIcon from "@material-ui/icons/Add";
 
-function CreateArea(props) {
+function AddNote() {
+
   const [note, setNote] = useState({
     title: "",
     content: ""
   });
+
   const [isExpanded, setExpanded] = useState(false);
 
   function handleChange(event) {
@@ -21,13 +25,11 @@ function CreateArea(props) {
     });
   }
 
-  function submitNote(event) {
-    props.onAdd(note);
-    setNote({
-      title: "",
-      content: ""
-    });
-    event.preventDefault();
+  let history = useHistory();
+
+  const submitNote = async () => {
+    await addNote(note);
+    history.push("./all");
   }
 
   function expand() {
@@ -35,7 +37,7 @@ function CreateArea(props) {
   }
 
   return (
-    <div>
+    <div style={{ marginTop: "100px"}}>
       <form className="create-note">
         {isExpanded && (
           <input
@@ -63,4 +65,4 @@ function CreateArea(props) {
   );
 }
 
-export default CreateArea;
+export default AddNote;
