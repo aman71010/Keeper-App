@@ -1,6 +1,5 @@
 {
   "name": "keeper-app",
-  "homepage": "https://aman71010.github.io/Notes-Keeper-app",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
@@ -11,7 +10,6 @@
     "@material-ui/icons": "4.11.2",
     "axios": "^0.21.1",
     "bootstrap": "^5.1.0",
-    "gh-pages": "^3.2.3",
     "react": "16.8.6",
     "react-bootstrap": "^1.6.1",
     "react-dom": "16.8.6",
@@ -22,8 +20,6 @@
     "typescript": "3.3.3"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

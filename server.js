@@ -14,7 +14,11 @@ app.use(express.urlencoded({extended: true}));
 app.use("/notes", router);
 
 const URL = process.env.ATLAS_URI;
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
+
+if(process.env.NODE_ENV == "production"){
+    app.use(express.static("client/build"));
+}
 
 mongoose.connect(URL, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false}).then(()=>{
     app.listen(PORT, ()=>{
