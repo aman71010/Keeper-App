@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const notesUrl = "http://localhost:8080/notes";
+//const notesUrl = "http://localhost:8080/notes";
+const notesUrl = "https://mernkeeper-app.herokuapp.com/notes";
 
 export const getNotes = async (id) => {
     id = id || "";
